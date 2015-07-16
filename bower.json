@@ -1,0 +1,6 @@
+{
+  "name": "node-postgresql-angular",
+  "dependencies": {
+    "angular": "~1.4.3"
+  }
+}
