@@ -19,7 +19,7 @@ app.use(express.static(path.join(__dirname, 'webapp')));
 var routes  = require('./api/routes/index'),
   events    = require('./api/routes/events');
 
-app.use('api/', routes);
-app.use('api/events', events);
+app.use('/api/', routes);
+app.use('/api/events', events);
 
 module.exports = app;
