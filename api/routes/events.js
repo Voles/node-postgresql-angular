@@ -4,7 +4,7 @@ var router = express.Router();
 
 router.get('/', function(req, res) {
   db.query('SELECT * FROM events ORDER BY id ASC', [], function (err, result) {
-    return res.json(result);
+    return res.json(result.rows);
   });
 });
 
