@@ -1,4 +1,4 @@
 angular.module('app')
-  .run(function () {
-    console.log('Application init');
+  .run(function ($log) {
+    $log.info('Application init');
   });

@@ -1,0 +1,31 @@
+<form class="form-inline" ng-show="enableSearch">
+  <div class="form-group">
+    <label for="query">Keyword</label>
+    <input type="text" class="form-control" id="query" ng-model="query" placeholder="Search query">
+  </div>
+</form>
+
+<hr>
+
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th class="col-sm-1">#</th>
+      <th class="col-sm-2">Author</th>
+      <th class="col-sm-4">Description</th>
+      <th class="col-sm-1">Date</th>
+      <th class="col-sm-2">Category</th>
+      <th class="col-sm-2">Location</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="event in events | filter: query">
+      <td ng-bind="$index + 1"></td>
+      <td ng-bind="event.author"></td>
+      <td ng-bind="event.description | limitTo: 100"></td>
+      <td ng-bind="event.date * 1000 | date: 'dd-MM-yyyy'"></td>
+      <td ng-bind="event.category"></td>
+      <td ng-bind="event.location"></td>
+    </tr>
+  </tbody>
+</table>

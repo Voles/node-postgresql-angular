@@ -3,14 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <title>Node.js, PostgreSQL and Angular</title>
+
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
 </head>
 <body ng-app="app">
 
-  <div ng-view></div>
+  <div class="container">
+    <div ng-view></div>
+  </div>
 
   <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="components/app/config.js"></script>
   <script src="components/app/run.js"></script>
+
+  <script src="resources/events.js"></script>
+
+  <script src="components/events-table/events-table.js"></script>
+  <script src="components/pages/home/home.js"></script>
 
 </body>
 </html>
