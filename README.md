@@ -26,4 +26,4 @@ Run the command below in the project root directory.
     $ bower install
 
 ## Build instructions
-To run the application server, run `$ npm start` inside the project directory.
+To run the application server, run `$ npm start` inside the project's root directory.
